@@ -8,7 +8,6 @@ router.get("/collection", async (req, res) => {
         const ps = req.query.ps
         const s = req.query.s
         const involvedMaker = req.query.involvedMaker
-        //let reg = new RegExp(involvedMaker,"i")
         const apikey = process.env.RIJKS_API_KEY
         const response = await axios.get(
           `https://www.rijksmuseum.nl/api/en/collection?key=${apikey}&p=${page}&ps=${ps}&s=${s}&involvedMaker=${involvedMaker}`
